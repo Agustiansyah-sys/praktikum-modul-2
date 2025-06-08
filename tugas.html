@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praktikum CSS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      background-color: #add8e6;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 800px;
+      width: 100%;
+      padding: 20px;
+    }
+    h1 {
+      font-size: 40px;
+      color: white;
+      background-color: transparent;
+      margin-bottom: 10px;
+    }
+    p {
+      background-color: #d3d3d3;
+      color: black;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+    .box-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .box {
+      border: 2px solid black;
+      padding: 10px;
+      height: 150px;
+      border-radius: 10px;
+    }
+    .box1 {
+      background-color: #f99999;
+    }
+    .box2 {
+      background-color: #99ff99;
+    }
+    .box3 {
+      background-color: #9999ff;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .box-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        padding: 10px;
+      }
+      .box {
+        height: 120px;
+        padding: 5px;
+      }
+      .box-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Praktikum CSS</h1>
+    <p>Ini adalah paragraf dengan latar belakang abu muda, teks berwarna hitam, dan padding yang cukup agar nyaman dibaca.</p>
+    <div class="box-container">
+      <div class="box box1">BOX 1</div>
+      <div class="box box2">BOX 2</div>
+      <div class="box box3">BOX 3</div>
+    </div>
+  </div>
+</body>
+</html>
